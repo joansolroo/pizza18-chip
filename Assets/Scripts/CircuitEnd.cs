@@ -7,6 +7,7 @@ public class CircuitEnd : CircuitNode {
     [SerializeField] Renderer node;
 
     [SerializeField] CircuitPath sourcePath;
+    [SerializeField] CircuitPath targetPath;
     void UpdateBehavior()
     {
         if (Application.isPlaying)
@@ -18,6 +19,8 @@ public class CircuitEnd : CircuitNode {
     private void Update()
     {
         this.active = sourcePath.active;
+        if(targetPath!=null)
+            targetPath.active = this.active; 
         UpdateBehavior();
     }
 

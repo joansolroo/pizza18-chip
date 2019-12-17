@@ -22,16 +22,17 @@ public class Floor : MonoBehaviour {
     {
         tiles = new FloorTile[width, depth];
     }
- /*   private void OnDrawGizmos()
+    private void OnDrawGizmos()
     {
         Recompute();
-        Gizmos.DrawWireCube(this.transform.position, new Vector3(width, 1, depth));
-        for(int x = 0; x< width; ++x)
+        //Gizmos.DrawWireCube(this.transform.position, new Vector3(width, 1, depth));
+        for (int x = 0; x < width; ++x)
         {
             for (int z = 0; z < depth; ++z)
             {
-                Gizmos.DrawWireCube(transform.TransformPoint(x-width/2f, 0, z-depth/2f)+new Vector3(0.5f,0.5f,0.5f), Vector3.one*0.5f);
+                Gizmos.DrawWireCube(transform.TransformPoint(x - width / 2f, 0, z - depth / 2f) + new Vector3(0.5f, 0.5f, 0.5f), new Vector3(1,0.1f,1) * 0.5f);
             }
-        
-    }*/
+
+        }
+    }
 }

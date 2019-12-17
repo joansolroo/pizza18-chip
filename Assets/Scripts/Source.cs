@@ -5,7 +5,8 @@ using UnityEngine;
 public class Source : CircuitNode {
 
     [SerializeField] Renderer node;
-
+    [SerializeField] CircuitPath targetPath;
+    [SerializeField] CircuitPath sourcePath;
     void UpdateBehavior()
     {
         if (Application.isPlaying)
@@ -14,6 +15,16 @@ public class Source : CircuitNode {
         }
     }
 
+    private void Update()
+    {
+        if (sourcePath != null)
+        {
+            this.active = sourcePath.active;
+        }
+        targetPath.active = this.active;
+        UpdateBehavior();
+
+    }
     void OnValidate()
     {
         UpdateBehavior();

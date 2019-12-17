@@ -83,8 +83,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1404584231443240}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -2.5, y: 0, z: -1.5}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0.01, y: 0, z: 0.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4950513184772136}
@@ -99,7 +99,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1931833944108162}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.25, z: 0}
+  m_LocalPosition: {x: -0.4, y: 0.25, z: 0}
   m_LocalScale: {x: 0.50000095, y: 0.5, z: 0.50000095}
   m_Children: []
   m_Father: {fileID: 4757377547536962}
@@ -216,7 +216,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 3, z: 0.5}
+  m_Size: {x: 1, y: 1, z: 0.5}
   m_Center: {x: -0.2, y: 0, z: 0}
 --- !u!114 &114997560183098586
 MonoBehaviour:
@@ -229,12 +229,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc743d9b42c2b5d4791a7e477c3c4316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 1
-  on: 1
+  active: 0
+  on: 0
   selected: 0
   SwitchKnob: {fileID: 4950513184772136}
   SwitchBase: {fileID: 4498709719301610}
-  selectedColor: {r: 0, g: 0.33793116, b: 1, a: 1}
-  defaultColor: {r: 0.49264705, g: 0.49264705, b: 0.49264705, a: 1}
-  onColor: {r: 0, g: 1, b: 0, a: 1}
-  offColor: {r: 1, g: 0, b: 0, a: 1}
+  sourcePath: {fileID: 0}
+  targetPath: {fileID: 0}
+  targetPathOff: {fileID: 0}

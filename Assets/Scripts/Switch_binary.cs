@@ -10,6 +10,8 @@ public class Switch_binary : CircuitNode, IInteractable {
     [SerializeField] Transform SwitchBase;
 
     [SerializeField] CircuitPath sourcePath;
+    [SerializeField] CircuitPath targetPath;
+    [SerializeField] CircuitPath targetPathOff;
     public void Deselect()
     {
         selected = false;
@@ -36,6 +38,8 @@ public class Switch_binary : CircuitNode, IInteractable {
     void Update()
     {
         this.active = this.on && sourcePath.active;
+        if(targetPath!=null)targetPath.active = this.active;
+        if(targetPathOff!=null)targetPathOff.active = !this.active;
     }
 
     void UpdateBehavior()
@@ -48,7 +52,7 @@ public class Switch_binary : CircuitNode, IInteractable {
             SwitchBase.gameObject.GetComponent<Renderer>().material.SetColor("_OutlineColor", selected ? selectedColor : defaultColor);
             SwitchKnob.gameObject.GetComponent<Renderer>().material.SetColor("_OutlineColor", selected ? selectedColor : defaultColor);
 
-            SwitchKnob.gameObject.GetComponent<Renderer>().material.color = on ? onColor : offColor;
+           // SwitchKnob.gameObject.GetComponent<Renderer>().material.color = on ? onColor : offColor;
         }
     }
 
